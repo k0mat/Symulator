@@ -57,7 +57,7 @@ public class Symulator {
     private void noweZdarzenie() {
         
         Zdarzenie zdarzenie = new Zdarzenie(lastId++);
-        System.out.println("Nowe zdarzenie " + zdarzenie.getId() + "at: " + nastepneZdarzenie);
+        System.out.println("Nowe zdarzenie " + zdarzenie.getId() + " at: " + (int)(nastepneZdarzenie/1000));
         if (kolejka.offer(zdarzenie) == false) {
             System.out.println("Brak miejsca w kolejce. Zdarzenie zostalo odrzucone.");
         }
@@ -83,7 +83,7 @@ public class Symulator {
         if(zdarzenie != null)
         {
             System.out.println("Zdarzenie " + zdarzenie.getId() 
-                    + " zostalo obsluzone at: " + czasKtoryMinal);
+                    + " zostalo obsluzone at: " + (int)(czasKtoryMinal/1000));
         }
     }
 
