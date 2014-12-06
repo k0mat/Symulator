@@ -5,17 +5,20 @@
  */
 package smib;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.GroupLayout;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.Timer;
 
 /**
  *
  * @author Mateusz
  */
-public class MainPanel extends JPanel {
+public class MainPanel extends JPanel implements ActionListener {
 
     final DrawPanel drawPanel = new DrawPanel();
     JTextField lamdaTextField = new JTextField("", 10);
@@ -27,6 +30,8 @@ public class MainPanel extends JPanel {
     JButton startButton = new JButton("Start");
 
     GroupLayout layout = new GroupLayout(this);
+    Timer timer;
+    int timerDelay = 20; // w milisekundach, 20ms = 50 fps
 
     public MainPanel() {
         super();
@@ -76,5 +81,16 @@ public class MainPanel extends JPanel {
                         )
                 )
         );
+        timer = new Timer(20, this);
+        timer.start();
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent ae) {
+        if( ae.getSource().equals(timer))
+        {
+            //System.out.println("timer action");
+        }
+        
     }
 }

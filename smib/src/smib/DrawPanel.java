@@ -20,6 +20,13 @@ public class DrawPanel extends JPanel {
         super.setBackground(Color.WHITE);
         super.paintComponent(g);
         
-        g.drawRect(5, 25, 5, 25);
+        g.fillRect(5, 25, 5, 25);
+        
+     }
+     
+     public void wyczysc(Graphics g)
+     {
+        super.setBackground(Color.WHITE);
+        super.paintComponent(g);
      }
 }
