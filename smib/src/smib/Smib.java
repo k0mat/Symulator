@@ -19,21 +19,20 @@ public class Smib {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-         try {
+        try {
             // Set System L&F
-        UIManager.setLookAndFeel(
-            UIManager.getSystemLookAndFeelClassName());
-    } 
-    catch (UnsupportedLookAndFeelException | ClassNotFoundException 
-            | InstantiationException | IllegalAccessException e) {
-      
-    }
-       
+            UIManager.setLookAndFeel(
+                    UIManager.getSystemLookAndFeelClassName());
+        } catch (UnsupportedLookAndFeelException | ClassNotFoundException 
+                | InstantiationException | IllegalAccessException e) {
+
+        }
+
         Okno okno = new Okno();
         MainPanel panel = new MainPanel();
         okno.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         okno.setContentPane(panel);
         okno.setVisible(true);
     }
-    
+
 }
