@@ -10,5 +10,13 @@ package smib;
  * @author Mateusz
  */
 public class Zdarzenie {
+    private int id;
+    public Zdarzenie(int id){
+        this.id = id;
+    }
     
+    public int getId(){
+        return id;
+    }
 }
+
