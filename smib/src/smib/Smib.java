@@ -6,6 +6,8 @@
 package smib;
 
 import javax.swing.JFrame;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
 /**
  *
@@ -17,6 +19,16 @@ public class Smib {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+         try {
+            // Set System L&F
+        UIManager.setLookAndFeel(
+            UIManager.getSystemLookAndFeelClassName());
+    } 
+    catch (UnsupportedLookAndFeelException | ClassNotFoundException 
+            | InstantiationException | IllegalAccessException e) {
+      
+    }
+       
         Okno okno = new Okno();
         MainPanel panel = new MainPanel();
         okno.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
