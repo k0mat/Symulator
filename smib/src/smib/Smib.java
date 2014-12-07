@@ -33,6 +33,7 @@ public class Smib {
         okno.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         okno.setContentPane(panel);
         okno.setVisible(true);
+        okno.createBufferStrategy(2);
     }
 
 }

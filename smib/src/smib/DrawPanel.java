@@ -14,19 +14,21 @@ import javax.swing.JPanel;
  * @author Mateusz
  */
 public class DrawPanel extends JPanel {
+    MainPanel panel;
     
-     @Override
-     public void paintComponent(Graphics g) {
-        super.setBackground(Color.WHITE);
+    public DrawPanel(MainPanel panel){
+        super();
+        this.panel = panel;
+    }
+    
+    @Override
+    public void paintComponent(Graphics g) {
+        super.setBackground(new Color(70, 100, 230));
         super.paintComponent(g);
-        
-        g.fillRect(5, 25, 5, 25);
-        
-     }
-     
-     public void wyczysc(Graphics g)
-     {
-        super.setBackground(Color.WHITE);
-        super.paintComponent(g);
-     }
+        Symulator sym = panel.getSymulator();
+        if(sym != null){
+            sym.draw(g);
+        }
+
+    }
 }

@@ -15,6 +15,6 @@ public class Okno extends JFrame {
    public Okno(){
        super();
        this.setTitle("Symulator");
-       this.setSize(800, 600);
+       this.setSize(1280, 720);
    }
 }

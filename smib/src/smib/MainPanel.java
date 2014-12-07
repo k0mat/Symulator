@@ -20,7 +20,7 @@ import javax.swing.Timer;
  */
 public class MainPanel extends JPanel implements ActionListener {
 
-    final DrawPanel drawPanel = new DrawPanel();
+    final DrawPanel drawPanel = new DrawPanel(this);
     JTextField lamdaTextField = new JTextField("90", 10);
     JTextField rozmiarTextField = new JTextField("10", 10);
     JTextField miTextField = new JTextField("60", 10);
@@ -119,9 +119,14 @@ public class MainPanel extends JPanel implements ActionListener {
            if(symulator != null)
            {
                symulator.update(timerDelay);
-               symulator.draw(drawPanel.getGraphics());
+               drawPanel.repaint();
+               //symulator.draw(drawPanel.getGraphics());
            }
         }
         
+    }
+    
+    public Symulator getSymulator(){
+        return symulator;
     }
 }

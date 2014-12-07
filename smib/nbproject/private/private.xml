@@ -3,10 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Development/projects/smib/smib/src/smib/MainPanel.java</file>
-            <file>file:/D:/Development/projects/smib/smib/src/smib/DrawPanel.java</file>
-            <file>file:/D:/Development/projects/smib/smib/src/smib/Smib.java</file>
-            <file>file:/D:/Development/projects/smib/smib/src/smib/Okno.java</file>
+            <file>file:/D:/Development/git/Symulator/smib/src/smib/Smib.java</file>
+            <file>file:/D:/Development/git/Symulator/smib/src/smib/DrawPanel.java</file>
+            <file>file:/D:/Development/git/Symulator/smib/src/smib/Symulator.java</file>
+            <file>file:/D:/Development/git/Symulator/smib/src/smib/MainPanel.java</file>
+            <file>file:/D:/Development/git/Symulator/smib/src/smib/Zdarzenie.java</file>
         </group>
     </open-files>
 </project-private>
