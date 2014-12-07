@@ -14,8 +14,8 @@ import java.awt.Graphics;
  */
 class ZdarzenieRuchome extends Zdarzenie{
     private static Symulator symulator;
-    private int pozycja;
-    private int koniec;
+    private double pozycja;
+    private double koniec;
     private boolean przychodzace;
     private boolean usunac = false;
     private Color color;
@@ -48,14 +48,14 @@ class ZdarzenieRuchome extends Zdarzenie{
     public void draw(Graphics g){
         g.setColor(color);
         if(przychodzace){
-           g.fillRect(pozycja, 300, 50, 50);
+           g.fillRect((int) pozycja, 300, 50, 50);
         } else {
-           g.fillOval(pozycja, 300, 50, 50);
+           g.fillOval((int) pozycja, 300, 50, 50);
         }
         g.setColor(Color.WHITE);
-        g.fillRect(pozycja + 12, 300 + 12, 25, 25);
+        g.fillRect((int) (pozycja + 12), 300 + 12, 25, 25);
         g.setColor(Color.BLACK);
-        g.drawString("" + getId(), pozycja + 15, 300 + 27);
+        g.drawString("" + getId(), (int) (pozycja + 15), 300 + 27);
         
     }
     public void setWychodzace(int poczatek, int koniec){

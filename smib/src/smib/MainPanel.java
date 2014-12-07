@@ -33,7 +33,7 @@ public class MainPanel extends JPanel implements ActionListener {
 
     GroupLayout layout = new GroupLayout(this);
     Timer timer;
-    int timerDelay = 20; // w milisekundach, 20ms = 50 fps
+    int timerDelay = 10; // w milisekundach, 20ms = 50 fps
     Symulator symulator;
 
     public MainPanel() {
@@ -100,7 +100,7 @@ public class MainPanel extends JPanel implements ActionListener {
             }
         });
         
-        timer = new Timer(20, this);
+        timer = new Timer(timerDelay, this);
         timer.start();
     }
     
